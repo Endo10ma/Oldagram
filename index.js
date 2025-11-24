@@ -28,3 +28,32 @@ const posts = [
     }
 ]
 
+let main = document.querySelector("main")
+
+for (let i = 0; i < posts.length; i++){
+    const post = posts[i]
+
+    main.innerHTML += `
+        <section class="post-content">
+            <div class="profile-section">    
+                <img class="avatar" src="${post.avatar}">
+                <div class="details">
+                    <h4>${post.name}</h4>
+                    <h5>${post.location}</h5>
+                </div>
+                
+            </div>
+            <img class="post" src="${post.post}">
+            <div class="actions">
+                <img src="images/icon-heart.png">
+                <img src="images/icon-comment.png">
+                <img src="images/icon-dm.png">
+            </div>
+            <h3>21,492 likes</h3>
+        <p><span>${post.username}</span> ${post.comment} </p>
+        </section>
+        <div class="filler"></div>
+    `
+
+
+}
